@@ -11,14 +11,16 @@
 
 
 document.getElementById("btn").addEventListener("click", function(){
-
     const randomColor = colors[Math.floor(Math.random()*colors.length)];
-
-    document.getElementById("pallete").style.background = randomColor;
     const textColor = colors[Math.floor(Math.random()*colors.length)];
-    document.getElementById("pallete").style.color = textColor;
+    if(randomColor !== textColor){
+        document.getElementById("pallete").style.background = randomColor;
    
-    document.getElementById('color').value = textColor
+        document.getElementById("pallete").style.color = textColor;
+       
+        document.getElementById('color').value = textColor
+    }
+   
    
 
 })
