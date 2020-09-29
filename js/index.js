@@ -36,5 +36,6 @@ function inputColor(){
     if (inputs.value !== '' ) {
     document.getElementById('pallete').style.background = inputs.value;
     }
-    
+    const textsColor = colors[Math.floor(Math.random()*colors.length)];
+    document.getElementById("pallete").style.color = textsColor;
 }
